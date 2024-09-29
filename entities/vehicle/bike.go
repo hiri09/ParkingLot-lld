@@ -1,9 +1,17 @@
 package vehicle
 
 type Bike struct {
-	BaseVehicle
+	VehicleNumber int
 }
 
-func (bike Bike) GetVehicleType() string {
-	return "Bike"
+func (bike Bike) GetVehicleNumberPlate() int {
+	return bike.VehicleNumber
+}
+
+func (bike *Bike) SetVehicleNumberPlate(plateNumber int) {
+	bike.VehicleNumber = plateNumber
+}
+
+func (bike *Bike) GetVehicleType() int {
+	return 1
 }
